@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "90° pride homes",
-    "slug": "90-degree-pride-homes",
+    "slug": "90-dph",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/splash.png",
@@ -34,7 +34,8 @@
         "android.permission.ACCESS_WIFI_STATE",
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.RECORD_AUDIO"
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA"
       ],
       "allowBackup": true
     },
@@ -111,7 +112,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "2186db0d-e4c6-4502-abf3-7b1e47f42a32"
+        "projectId": "d3e128be-ca97-4068-aceb-a6365f24c6a3"
       },
       "doctor": {
         "reactNativeDirectoryCheck": {
