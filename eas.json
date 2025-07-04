@@ -1,0 +1,78 @@
+{
+  "cli": {
+    "version": ">= 5.9.1",
+    "appVersionSource": "remote",
+    "requireCommit": false
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug",
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium",
+        "buildConfiguration": "Debug"
+      },
+      "cache": {
+        "key": "development-v1"
+      },
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_c3Rlcmxpbmctc3BpZGVyLTUwLmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_API_URL": "https://90-dph.vercel.app/api"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false,
+        "resourceClass": "m-medium"
+      },
+      "cache": {
+        "key": "preview-v1"
+      },
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_c3Rlcmxpbmctc3BpZGVyLTUwLmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_API_URL": "https://90-dph.vercel.app/api"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "distribution": "store",
+        "resourceClass": "m-medium"
+      },
+      "cache": {
+        "key": "production-v1"
+      },
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_c3Rlcmxpbmctc3BpZGVyLTUwLmNsZXJrLmFjY291bnRzLmRldiQ",
+        "EXPO_PUBLIC_API_URL": "https://90-dph.vercel.app/api"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "process.env.APPLE_ID",
+        "ascAppId": "process.env.ASC_APP_ID",
+        "appleTeamId": "process.env.APPLE_TEAM_ID"
+      },
+      "android": {
+        "serviceAccountKeyPath": "process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH",
+        "track": "production"
+      }
+    }
+  }
+}
